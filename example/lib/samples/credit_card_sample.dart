@@ -1,7 +1,4 @@
 import 'dart:ui';
-
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CreditCardSample extends StatefulWidget {
@@ -12,15 +9,7 @@ class CreditCardSample extends StatefulWidget {
 class _CreditCardSampleState extends State<CreditCardSample> {
   @override
   Widget build(BuildContext context) {
-    return NeumorphicTheme(
-      theme: NeumorphicThemeData(
-          intensity: 0.6, lightSource: LightSource.topLeft, depth: 5),
-      child: Scaffold(
-        body: SafeArea(
-          child: NeumorphicBackground(child: _PageContent()),
-        ),
-      ),
-    );
+    return _PageContent();
   }
 }
 
@@ -35,23 +24,27 @@ class __PageContentState extends State<_PageContent> {
 
   @override
   Widget build(BuildContext context) {
-    return NeumorphicBackground(
-      borderRadius: BorderRadius.circular(12),
-      margin: EdgeInsets.all(12),
-      child: Column(
-        children: <Widget>[
-          SizedBox(height: 14),
-          _buildTopBar(context),
-          SizedBox(height: 30),
-          Expanded(child: _buildCard(context)),
-          SizedBox(height: 30),
-          _buildDots(context),
-          SizedBox(height: 30),
-          _buildBalance(context),
-          SizedBox(height: 30),
-          _buildIndicator(context),
-          SizedBox(height: 30),
-        ],
+    return Scaffold(
+      body: NeumorphicBackground(
+        borderRadius: BorderRadius.circular(12),
+        margin: EdgeInsets.all(12),
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 14),
+              _buildTopBar(context),
+              SizedBox(height: 30),
+              Expanded(child: _buildCard(context)),
+              SizedBox(height: 30),
+              _buildDots(context),
+              SizedBox(height: 30),
+              _buildBalance(context),
+              SizedBox(height: 30),
+              _buildIndicator(context),
+              SizedBox(height: 30),
+            ],
+          ),
+        ),
       ),
     );
   }

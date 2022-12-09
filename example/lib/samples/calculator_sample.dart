@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CalculatorSample extends StatefulWidget {
@@ -198,7 +197,11 @@ class __PageContentState extends State<_PageContent> {
           ),
           Row(
             children: <Widget>[
-              RaisedButton(
+              ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)), 
+              ),
                 onPressed: () {
                   setState(() {
                     NeumorphicTheme.of(context)
@@ -213,7 +216,11 @@ class __PageContentState extends State<_PageContent> {
                   "style 1",
                 ),
               ),
-              RaisedButton(
+              ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)), 
+              ),
                 onPressed: () {
                   setState(() {
                     NeumorphicTheme.of(context)

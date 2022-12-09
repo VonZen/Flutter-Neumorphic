@@ -1,9 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-
-import 'theme.dart';
-import 'theme_wrapper.dart';
 
 export 'theme.dart';
 export 'theme_wrapper.dart';
@@ -43,11 +38,9 @@ class NeumorphicThemeInherited extends InheritedWidget {
   void updateCurrentTheme(NeumorphicThemeData update) {
     if (value.useDark) {
       final newValue = value.copyWith(darkTheme: update);
-      //this.value = newValue;
       this.onChanged(newValue);
     } else {
       final newValue = value.copyWith(theme: update);
-      //this.value = newValue;
       this.onChanged(newValue);
     }
   }
@@ -55,12 +48,10 @@ class NeumorphicThemeInherited extends InheritedWidget {
   void update(NeumorphicThemeUpdater themeUpdater) {
     final update = themeUpdater(value.current);
     if (value.useDark) {
-      final newValue = value.copyWith(darkTheme: update);
-      //this.value = newValue;
+      final newValue = value.copyWith(darkTheme: update); 
       this.onChanged(newValue);
     } else {
-      final newValue = value.copyWith(theme: update);
-      //this.value = newValue;
+      final newValue = value.copyWith(theme: update); 
       this.onChanged(newValue);
     }
   }

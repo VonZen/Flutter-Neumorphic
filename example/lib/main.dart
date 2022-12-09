@@ -4,8 +4,7 @@ import 'main_home.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatelessWidget { 
   @override
   Widget build(BuildContext context) {
     return NeumorphicApp(
@@ -13,12 +12,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       themeMode: ThemeMode.light,
       theme: NeumorphicThemeData(
-        baseColor: Color(0xFFFFFFFF),
+        // baseColor: Color(0xFFFFFFFF),
         lightSource: LightSource.topLeft,
         depth: 10,
       ),
       darkTheme: NeumorphicThemeData(
-        baseColor: Color(0xFF3E3E3E),
+        // baseColor: Color(0xFF3E3E3E),
         lightSource: LightSource.topLeft,
         depth: 6,
       ),
@@ -77,15 +76,14 @@ class MyHomePage extends StatelessWidget {
                 margin: EdgeInsets.only(top: 12),
                 onPressed: () {
                   Navigator.of(context)
-                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                      .push(MaterialPageRoute(builder: (context) {
                     return FullSampleHomePage();
                   }));
                 },
                 style: NeumorphicStyle(
                   shape: NeumorphicShape.flat,
                   boxShape:
-                      NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
-                  //border: NeumorphicBorder()
+                      NeumorphicBoxShape.roundRect(BorderRadius.circular(8)), 
                 ),
                 padding: const EdgeInsets.all(12.0),
                 child: Text(

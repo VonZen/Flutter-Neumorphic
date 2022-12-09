@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/widgets.dart';
-
 import 'neumorphic_emboss_decoration_painter.dart';
 import 'neumorphic_text_decoration_painter.dart';
 
