@@ -158,16 +158,14 @@ class _NeumorphicProgressState extends State<NeumorphicProgress>
   }
 
   @override
-  Widget build(BuildContext context) {
-    //print("widget.style.depth: ${widget.style.depth}");
-
+  Widget build(BuildContext context) {  
     final NeumorphicThemeData theme = NeumorphicTheme.currentTheme(context);
     return SizedBox(
       height: widget.height,
       child: FractionallySizedBox(
-        widthFactor: 1,
-        //width: constraints.maxWidth,
+        widthFactor: 1, 
         child: Neumorphic(
+          animate: true,
           padding: EdgeInsets.zero,
           style: NeumorphicStyle(
             boxShape: NeumorphicBoxShape.roundRect(widget.style.borderRadius),
@@ -297,6 +295,7 @@ class _NeumorphicProgressIndeterminateState
       child: SizedBox(
         height: widget.height,
         child: Neumorphic(
+          animate: true,
           padding: EdgeInsets.zero,
           style: NeumorphicStyle(
             boxShape: NeumorphicBoxShape.roundRect(widget.style.borderRadius),

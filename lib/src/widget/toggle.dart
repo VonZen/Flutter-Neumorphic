@@ -188,6 +188,7 @@ class NeumorphicToggle extends StatelessWidget {
             widthFactor: 1 / this.children.length,
             heightFactor: 1,
             child: Neumorphic(
+              animate: true,
               style: NeumorphicStyle(
                 boxShape: NeumorphicBoxShape.roundRect(
                     this.style?.borderRadius ??

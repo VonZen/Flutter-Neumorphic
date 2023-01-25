@@ -195,7 +195,7 @@ class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
     return SizedBox(
       height: widget.height,
       width: widget.width,
-      child: Neumorphic(
+      child: Neumorphic( 
         padding: EdgeInsets.zero,
         style: NeumorphicStyle(
           boxShape: NeumorphicBoxShape.stadium(),
@@ -222,7 +222,7 @@ class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
                     : Alignment.bottomCenter,
                 child: Padding(
                   padding: widget.padding,
-                  child: Neumorphic(
+                  child: Neumorphic( 
                     style: NeumorphicStyle(
                       boxShape: NeumorphicBoxShape.stadium(),
                       lightSource:

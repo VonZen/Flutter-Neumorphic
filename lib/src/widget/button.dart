@@ -193,6 +193,7 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
       child: animationScale.AnimatedScale(
         scale: _getScale(),
         child: Neumorphic(
+          animate: true,
           margin: widget.margin ?? const EdgeInsets.all(0),
           drawSurfaceAboveChild: widget.drawSurfaceAboveChild,
           duration: widget.duration,
