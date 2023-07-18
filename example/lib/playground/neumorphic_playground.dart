@@ -30,7 +30,7 @@ class _Page extends StatefulWidget {
 class __PageState extends State<_Page> {
   LightSource lightSource = LightSource.topLeft;
   NeumorphicShape shape = NeumorphicShape.flat;
-  NeumorphicBoxShape boxShape;
+  late NeumorphicBoxShape boxShape;
   double depth = 5;
   double intensity = 0.5;
   double surfaceIntensity = 0.5;
@@ -209,7 +209,7 @@ class __PageState extends State<_Page> {
         return childCustomizer();
         break;
     }
-    return null;
+    return SizedBox();
   }
 
   Widget styleCustomizer() {
@@ -262,7 +262,7 @@ class __PageState extends State<_Page> {
         ColorSelector(
           onColorChanged: (color) {
             setState(() {
-              NeumorphicTheme.of(context).updateCurrentTheme(NeumorphicThemeData(baseColor: color));
+              NeumorphicTheme.of(context)!.updateCurrentTheme(NeumorphicThemeData(baseColor: color));
             });
           },
           color: NeumorphicTheme.baseColor(context),
@@ -423,7 +423,7 @@ class __PageState extends State<_Page> {
             value: this.haveNeumorphicChild,
             onChanged: (value) {
               setState(() {
-                haveNeumorphicChild = value;
+                haveNeumorphicChild = value!;
               });
             },
           ),
@@ -449,7 +449,7 @@ class __PageState extends State<_Page> {
             value: this.drawAboveChild,
             onChanged: (value) {
               setState(() {
-                drawAboveChild = value;
+                drawAboveChild = value!;
               });
             },
           ),
@@ -475,7 +475,7 @@ class __PageState extends State<_Page> {
             value: this.childOppositeLightsourceChild,
             onChanged: (value) {
               setState(() {
-                childOppositeLightsourceChild = value;
+                childOppositeLightsourceChild = value!;
               });
             },
           ),
@@ -521,7 +521,7 @@ class __PageState extends State<_Page> {
   }
 
   Widget cornerRadiusSelector() {
-    if (boxShape.isRoundRect || boxShape.isBeveled) {
+    if (boxShape!.isRoundRect || boxShape!.isBeveled) {
       return Row(
         children: <Widget>[
           Padding(
@@ -536,10 +536,10 @@ class __PageState extends State<_Page> {
               onChanged: (value) {
                 setState(() {
                   cornerRadius = value;
-                  if (boxShape.isRoundRect) {
+                  if (boxShape!.isRoundRect) {
                     boxShape = NeumorphicBoxShape.roundRect(BorderRadius.circular(this.cornerRadius));
                   }
-                  if (boxShape.isBeveled) {
+                  if (boxShape!.isBeveled) {
                     boxShape = NeumorphicBoxShape.beveled(BorderRadius.circular(this.cornerRadius));
                   }
                 });

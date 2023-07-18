@@ -38,8 +38,8 @@ class __PageState extends State<_Page> {
   double height = 150.0;
   double width = 150.0;
 
-  Color borderColor;
-  double borderWidth;
+  late Color borderColor;
+  late double borderWidth;
 
   static final minWidth = 50.0;
   static final maxWidth = 200.0;
@@ -102,7 +102,7 @@ class __PageState extends State<_Page> {
   int selectedConfiguratorIndex = 0;
 
   Widget _configurators() {
-    final Color buttonActiveColor = Theme.of(context).accentColor;
+    final Color buttonActiveColor = Theme.of(context).colorScheme.secondary;
     final Color buttonInnactiveColor = Colors.white;
 
     final Color textActiveColor = Colors.white;
@@ -207,7 +207,7 @@ class __PageState extends State<_Page> {
         return borderCustomizer();
         break;
     }
-    return null;
+    return SizedBox();
   }
 
   Widget styleCustomizer() {
@@ -256,7 +256,7 @@ class __PageState extends State<_Page> {
         ColorSelector(
           onColorChanged: (color) {
             setState(() {
-              NeumorphicTheme.of(context).updateCurrentTheme(NeumorphicThemeData(baseColor: color));
+              NeumorphicTheme.of(context)!.updateCurrentTheme(NeumorphicThemeData(baseColor: color));
             });
           },
           color: NeumorphicTheme.baseColor(context),
@@ -499,7 +499,7 @@ class __PageState extends State<_Page> {
   }
 
   Widget shapeWidget() {
-    final Color buttonActiveColor = Theme.of(context).accentColor;
+    final Color buttonActiveColor = Theme.of(context).colorScheme.secondary;
     final Color buttonInnactiveColor = Colors.white;
 
     final Color iconActiveColor = Colors.white;

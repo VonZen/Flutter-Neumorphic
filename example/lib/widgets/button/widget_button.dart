@@ -5,7 +5,7 @@ import 'package:example/lib/top_bar.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class ButtonWidgetPage extends StatefulWidget {
-  ButtonWidgetPage({Key key}) : super(key: key);
+  ButtonWidgetPage({Key? key}) : super(key: key);
 
   @override
   createState() => _WidgetPageState();

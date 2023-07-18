@@ -9,7 +9,7 @@ import 'playground/text_playground.dart';
 import 'samples/sample_home.dart'; 
 
 class FullSampleHomePage extends StatelessWidget {
-  Widget _buildButton({String text, VoidCallback onClick}) {
+  Widget _buildButton({String? text, VoidCallback? onClick}) {
     return NeumorphicButton(
       margin: EdgeInsets.only(bottom: 12),
       padding: EdgeInsets.symmetric(
@@ -24,7 +24,7 @@ class FullSampleHomePage extends StatelessWidget {
         shape: NeumorphicShape.flat,
         // color: Colors.white
       ),
-      child: Center(child: Text(text,)),
+      child: Center(child: Text(text??'',)),
       onPressed: onClick,
     );
   }

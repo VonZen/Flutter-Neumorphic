@@ -21,7 +21,7 @@ class Code extends StatelessWidget {
 class MyIntWidget extends StatefulWidget {
   final int value;
 
-  MyIntWidget({this.value});
+  MyIntWidget({required this.value});
 
   @override
   _MyIntWidgetState createState() => _MyIntWidgetState();
@@ -29,9 +29,9 @@ class MyIntWidget extends StatefulWidget {
 
 class _MyIntWidgetState extends State<MyIntWidget>
     with TickerProviderStateMixin {
-  int _value;
-  AnimationController _controller;
-  Animation<int> _valueAnimation;
+  late int _value;
+  late AnimationController _controller;
+  late Animation<int> _valueAnimation;
 
   @override
   void initState() {

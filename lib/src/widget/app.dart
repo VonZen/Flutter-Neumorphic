@@ -84,14 +84,9 @@ class NeumorphicApp extends StatelessWidget {
     }
 
     return ThemeData(
-      primaryColor: theme.accentColor,
-      accentColor: theme.variantColor,
+      primaryColor: theme.accentColor, 
       iconTheme: theme.iconTheme,
-      brightness: ThemeData.estimateBrightnessForColor(theme.baseColor),
-      primaryColorBrightness:
-          ThemeData.estimateBrightnessForColor(theme.accentColor),
-      accentColorBrightness:
-          ThemeData.estimateBrightnessForColor(theme.variantColor),
+      brightness: ThemeData.estimateBrightnessForColor(theme.baseColor),  
       textTheme: theme.textTheme,
       scaffoldBackgroundColor: theme.baseColor,
     );

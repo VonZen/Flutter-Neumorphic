@@ -1,14 +1,14 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class WidgetsSample extends StatefulWidget {
-  WidgetsSample({Key key}) : super(key: key);
+  WidgetsSample({Key? key}) : super(key: key);
 
   @override
   createState() => _ContainersListPageState();
 }
 
 class _ContainersListPageState extends State<WidgetsSample> {
-  int _groupValue;
+  int? _groupValue;
   bool _switchConcaveEnabled = false;
   bool _switchConvexEnabled = false;
   bool _switchFlatEnabled = false;
@@ -122,7 +122,7 @@ class _ContainersListPageState extends State<WidgetsSample> {
           ),
           value: 1,
           groupValue: _groupValue,
-          onChanged: (value) {
+          onChanged: (int? value) {
             setState(() {
               _groupValue = value;
             });
@@ -142,7 +142,7 @@ class _ContainersListPageState extends State<WidgetsSample> {
           ),
           value: 2,
           groupValue: _groupValue,
-          onChanged: (value) {
+          onChanged: (int? value) {
             setState(() {
               _groupValue = value;
             });
@@ -162,7 +162,7 @@ class _ContainersListPageState extends State<WidgetsSample> {
           ),
           value: 3,
           groupValue: _groupValue,
-          onChanged: (value) {
+          onChanged: (int? value) {
             setState(() {
               _groupValue = value;
             });

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class RadioButtonWidgetPage extends StatefulWidget {
-  RadioButtonWidgetPage({Key key}) : super(key: key);
+  RadioButtonWidgetPage({Key? key}) : super(key: key);
 
   @override
   createState() => _WidgetPageState();
@@ -69,7 +69,7 @@ class _DefaultWidget extends StatefulWidget {
 }
 
 class _DefaultWidgetState extends State<_DefaultWidget> {
-  int groupValue;
+  int? groupValue;
 
   Widget _buildCode(BuildContext context) {
     return Code("""
@@ -98,15 +98,10 @@ NeumorphicRadio(
             style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
           ),
           SizedBox(width: 12),
-          NeumorphicRadio(
-            //uncomment to test colors
-            //style: NeumorphicRadioStyle(
-            //  selectedColor: Colors.black,
-            //  unselectedColor: Colors.blue
-            //),
+          NeumorphicRadio( 
             groupValue: groupValue,
             value: 1991,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
                 groupValue = value;
               });
@@ -118,7 +113,7 @@ NeumorphicRadio(
           NeumorphicRadio(
             value: 2000,
             groupValue: groupValue,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
                 groupValue = value;
               });
@@ -130,7 +125,7 @@ NeumorphicRadio(
           NeumorphicRadio(
             groupValue: groupValue,
             value: 2012,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
                 groupValue = value;
               });
@@ -160,7 +155,7 @@ class CircleRadios extends StatefulWidget {
 }
 
 class _CircleRadiosState extends State<CircleRadios> {
-  String groupValue;
+  String? groupValue;
 
   Widget _buildCode(BuildContext context) {
     return Code("""
@@ -196,7 +191,7 @@ NeumorphicRadio(
             ),
             groupValue: groupValue,
             value: "A",
-            onChanged: (value) {
+            onChanged: (String? value) {
               setState(() {
                 groupValue = value;
               });
@@ -211,7 +206,7 @@ NeumorphicRadio(
               boxShape: NeumorphicBoxShape.circle(),
             ),
             groupValue: groupValue,
-            onChanged: (value) {
+            onChanged: (String? value) {
               setState(() {
                 groupValue = value;
               });
@@ -226,7 +221,7 @@ NeumorphicRadio(
             ),
             groupValue: groupValue,
             value: "C",
-            onChanged: (value) {
+            onChanged: (String? value) {
               setState(() {
                 groupValue = value;
               });
@@ -256,7 +251,7 @@ class _EnabledDisabledWidget extends StatefulWidget {
 }
 
 class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
-  int groupValue;
+  int? groupValue;
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
@@ -273,7 +268,7 @@ class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
             value: 1,
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
             child: Text("First"),
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
                 groupValue = value;
               });
@@ -291,7 +286,7 @@ class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
             value: 2,
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 18),
             child: Text("Second"),
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
                 groupValue = value;
               });
